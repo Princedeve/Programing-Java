@@ -2,7 +2,7 @@ package array;
 
 public class findLargest {
       public static int findLargest(int arr[]){
-        int num = arr[0];
+        int num = arr[0];//Integer.MIN_VALUE;
         for(int i = 0; i<arr.length; i++){
             if(arr[i] > num){
                 num = arr[i];
