@@ -10,10 +10,21 @@ public class findLargest {
         }
         return num;
     }
+         public static int findSmallest(int arr[]){
+        int num = arr[0];
+        for(int i = 0; i<arr.length; i++){
+            if(arr[i] < num){
+                num = arr[i];
+            }
+        }
+        return num;
+    }
     public static void main(String args[]){
         
         int arr[] = {1,2,6,3,5};
         int largest = findLargest(arr);
-        System.out.println("largest number of array is : "+largest);
+        int smallest = findSmallest(arr);
+        System.out.println("Largest number of array is : "+largest);
+        System.out.println("Smallest number of array is : "+smallest);
     }
 }
