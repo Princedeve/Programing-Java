@@ -1,19 +1,28 @@
 import java.util.*;
 
 public class test {
-    public static int findLargest(int arr[]){
-        int num = arr[0];
-        for(int i = 0; i<arr.length; i++){
-            if(arr[i] > num){
-                num = arr[i];
-            }
-        }
-        return num;
+
+    public static void reverseArray(int arr[]){
+      int first = 0, last = arr.length-1;
+
+      while (first < last) {
+        //swap
+        int temp = arr[last];
+        arr[last] = arr[first];
+        arr[first] = temp;
+        first++;
+        last--;
+      }
     }
     public static void main(String args[]){
         
-        int arr[] = {1,2,6,3,5};
-        int largest = findLargest(arr);
-        System.out.println(largest);
+        int numbers[] = {2,4,6,8,10};
+        reverseArray(numbers);
+        //print
+        for(int i = 0; i<numbers.length; i++){
+            System.out.print(numbers[i]+" ");
+        }
+        System.out.println();
+        
     }
 }
