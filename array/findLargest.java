@@ -10,8 +10,8 @@ public class findLargest {
         }
         return num;
     }
-         public static int findSmallest(int arr[]){
-        int num = arr[0];
+        public static int findSmallest(int arr[]){
+        int num = Integer.MAX_VALUE;
         for(int i = 0; i<arr.length; i++){
             if(arr[i] < num){
                 num = arr[i];
