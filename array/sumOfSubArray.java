@@ -1,8 +1,7 @@
-import java.util.*;
+package array;
 
-public class test {
-
-   public static void subArray(int arr[]){
+public class sumOfSubArray {
+    public static void subArray(int arr[]){
     int tp = 0;
     for(int i = 0; i<arr.length; i++){
       for(int j = i; j<arr.length; j++){
@@ -22,5 +21,4 @@ public class test {
       subArray(arr);
         
     }
-
 }
