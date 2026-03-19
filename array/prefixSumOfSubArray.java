@@ -12,6 +12,11 @@ public class prefixSumOfSubArray {
         for(int i = 0; i<arr.length; i++){
             for(int j = i; j<arr.length; j++){
                 sum = i == 0 ? prefix[j] : prefix[j] - prefix[i-1];
+                // if(i==0){
+                //     sum = prefix[j];
+                // }else{
+                //     sum = prefix[j] - prefix[i-1];
+                // }
                 System.out.println(sum);
                 if(max < sum){
                     max = sum;
