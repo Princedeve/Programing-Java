@@ -28,11 +28,11 @@ public class trappingRainWater {
     return right;
   }
   public static void trappingRainWater(int arr[]){
-    int wl = 0;
-    int tw = 0;
-    int left[] = getLeftMax(arr);
-    int right[] = getRightMax(arr);
-    for(int h = 0; h<arr.length; h++){
+      int tw = 0;
+      int left[] = getLeftMax(arr);
+      int right[] = getRightMax(arr);
+      for(int h = 0; h<arr.length; h++){
+        int wl = 0;
       if(left[h] < right[h]){
         wl = left[h];
       }else{
