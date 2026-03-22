@@ -1,6 +1,11 @@
 package array;
 
 public class trappingRainWater {
+  //calculate left max boundary - array
+  //calculate right max boundary - array
+  //loop
+  //waterlevel = min(leftmax bound, rightmax bound)
+  //trappedwater = waterlevel - height[i]
      public static int[] getLeftMax(int arr[]){
     int left[] = new int[arr.length];
     left[0] = arr[0];
