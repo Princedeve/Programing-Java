@@ -1,6 +1,6 @@
 package array;
 
-public class trappingRainWater {
+public class trappingRainWater { // O(n)
   //calculate left max boundary - array
   //calculate right max boundary - array
   //loop
