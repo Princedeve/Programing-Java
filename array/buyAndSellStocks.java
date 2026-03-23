@@ -1,6 +1,6 @@
 package array;
 
-public class buyAndSellStocks {
+public class buyAndSellStocks { // time complexity is O(n)
     public static int maxProfit(int priceArr[]){
         int maxProfit = 0;
         int buyPrice = priceArr[0];
