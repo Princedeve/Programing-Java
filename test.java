@@ -1,21 +1,38 @@
 import java.util.*;
 
 public class test {
-  public static int target(int arr[], int target){
-    for(int i = 0; i<arr.length; i++){
-      if(arr[i] == target){
-        return i;
+  
+  public static void sort(int arr[]){
+    for(int i = 0; i < arr.length; i++){
+      for(int j = i + 1; j < arr.length; j++){
+        if(arr[i] > arr[j]){
+          int temp = arr[i];
+          arr[i] = arr[j];
+          arr[j] = temp;
+        }
       }
     }
-    return -1;
   }
-   public static void main(String args[]){
-    int nums[] = {1};
-    int result = target(nums, 0);
-    if(result == -1){
-      System.out.println(result);
-    }else{
-      System.out.println("index found at "+ result);
+
+  public static boolean checkTwiceOptimise(int arr[]){
+    // sort(arr);
+    Arrays.sort(arr);
+
+    for(int i = 0; i < arr.length - 1; i++){
+      if(arr[i] == arr[i+1]){
+        return true;
+      }
     }
-   }    
+    return false;
+  }
+ 
+  public static void main(String args[]){
+    int nums[] = {1,2,3,3};
+
+    if(checkTwiceOptimise(nums)){
+      System.out.println("true");
+    } else {
+      System.out.println("false");
+    }
+  }    
 }
