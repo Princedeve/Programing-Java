@@ -1,0 +1,25 @@
+concept           simple meaning               main idea
+
+Encapsulation  Data ko protect/bundle karna    private
+
+Inheritance    Parent se properties/methods    extends
+               lena
+
+Polymorphism   Same interface/name, different  Overloading/Overriding
+               behavior
+               
+Abstraction    Internal complexity hide karna  abstract/interface
+
+Encapsulation → Protect
+Inheritance   → Reuse
+Polymorphism  → Different behavior
+Abstraction   → Hide complexity
+
+What are the four pillars of OOP?
+
+The four pillars of Object-Oriented Programming are Encapsulation,
+Inheritance, Polymorphism, and Abstraction. Encapsulation protects 
+and bundles data, Inheritance provides code reuse through parent-child
+relationships, Polymorphism allows the same interface or method name to
+have different behavior, and Abstraction hides implementation details 
+while exposing essential functionality.
