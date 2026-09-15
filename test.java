@@ -1,9 +1,10 @@
 import java.util.*;
 
-import array.linearSearch; 
+import array.linearSearch;
+import oops.encapsulation; 
 
 public class test {
-    public static int linearSearch(int num[], int key) {
+    public static int linearSearch(String num[], String key) {
 
           for(int i = 0; i<num.length; i++){
             if(num[i] == key){
@@ -14,17 +15,45 @@ public class test {
         return -1;
     }
 
+    public static int largest(int arr[]){
+        int num = arr[0];
+        for(int i = 0; i<arr.length; i++){
+            if(num < arr[i]){
+                int temp = num;
+                num = arr[i];
+                arr[i] = temp;
+            }
+        }
+
+        return num;
+        
+    } 
+    public static int binarySearch(int arr[], int key){
+        int mid;
+        int st = arr[0];
+        int end = arr.length-1;
+        int result = 0;
+        for(int i = st; i<=end; i++){
+            mid = (st+end) / 2;
+            if(arr[mid] == key ){
+                result = mid;
+            }else if(arr[mid] > key){
+                st = mid+1;
+            }else{
+                end = mid-1;
+            }
+        }
+        return result;
+    }
     public static void main(String[] args) {
         
-        int arr[] = {2,4,6,8,10,12,14,16};
-        int x = 10;
+        String arr[] = {"dosa", "chole bhature", "samosa", "fruti"};
+        String x = "samosa";
 
-        int index = linearSearch(arr, x);
+       int array[] = {1,2,6,3,5};
 
-        if(index == -1){
-            System.out.println("Not found");
-        }else{
-            System.out.println("key is at index: "+index);
-        }
+       int num[] = {2,4,6,8,10,12,14};
+       int key = 10;
+       System.out.println(binarySearch(num, key));
     }
 }
