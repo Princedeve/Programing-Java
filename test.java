@@ -30,14 +30,14 @@ public class test {
     } 
     public static int binarySearch(int arr[], int key){
         int mid;
-        int st = arr[0];
+        int st = 0;
         int end = arr.length-1;
         int result = 0;
         for(int i = st; i<=end; i++){
             mid = (st+end) / 2;
             if(arr[mid] == key ){
                 result = mid;
-            }else if(arr[mid] > key){
+            }else if(arr[mid] < key){
                 st = mid+1;
             }else{
                 end = mid-1;
@@ -53,7 +53,7 @@ public class test {
        int array[] = {1,2,6,3,5};
 
        int num[] = {2,4,6,8,10,12,14};
-       int key = 10;
+       int key = 8;
        System.out.println(binarySearch(num, key));
     }
 }
