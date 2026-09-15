@@ -33,7 +33,7 @@ public class tests {
                 continue;
             }
 
-            total = total + (price * qty);
+            total  += (price * qty);
 
             System.out.println("Press 1 to continue, 0 to stop: ");
             choice = sc.nextInt();
