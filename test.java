@@ -63,7 +63,7 @@ public class test {
     }
 
     public static void reverseArr(int arr[]){
-        int frist = 0, last = arr.length-1;
+        int first = 0, last = arr.length-1;
         while(frist < last){
             //swap
             int temp = arr[last];
@@ -72,6 +72,13 @@ public class test {
             frist++;
             last--;
         }
+
+        // for(; first<last; first++,last--){
+        //     //swap
+        //     int temp = arr[last];
+        //     arr[last] = arr[first];
+        //     arr[first] = temp;
+        // }
 
     }
     public static void main(String[] args) {
