@@ -62,14 +62,17 @@ public class test {
         return -1;
     }
 
-    public static int[] reverseArr(int arr[]){
-      int n = arr.length-1;
-      int copy[] = new int[arr.length];
+    public static void reverseArr(int arr[]){
+        int frist = 0, last = arr.length-1;
+        while(frist < last){
+            //swap
+            int temp = arr[last];
+            arr[last] = arr[frist];
+            arr[frist] = temp;
+            frist++;
+            last--;
+        }
 
-      for(int i = n; i>=0; i--){
-        copy[n-i] = arr[i];
-      }
-      return copy;
     }
     public static void main(String[] args) {
         
@@ -83,13 +86,7 @@ public class test {
        
        int rev[] = {2,4,6,8,10};
 
-       int copy[] = new int[rev.length-1];
-
-       copy = reverseArr(rev);
-
-       for(int i = 0; i<rev.length; i++){
-        rev[i] = copy[i];
-       }
+       reverseArr(rev);
 
        for(int i = 0; i<rev.length; i++){
         System.out.println(rev[i]);
