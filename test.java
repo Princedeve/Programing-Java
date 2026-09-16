@@ -64,12 +64,12 @@ public class test {
 
     public static void reverseArr(int arr[]){
         int first = 0, last = arr.length-1;
-        while(frist < last){
+        while(first < last){
             //swap
             int temp = arr[last];
-            arr[last] = arr[frist];
-            arr[frist] = temp;
-            frist++;
+            arr[last] = arr[first];
+            arr[first] = temp;
+            first++;
             last--;
         }
 
@@ -81,6 +81,19 @@ public class test {
         // }
 
     }
+
+    public static void pairsArry(int arr[]){
+        int tp = 0;
+        for(int i = 0; i<arr.length; i++){
+            for(int j = i+1; j<arr.length; j++){
+                System.out.print(arr[i]+","+arr[j]+" ");
+                tp++;
+            }
+            System.out.println();
+        }
+        System.out.println("total number of pairs is :"+tp);
+    }
+
     public static void main(String[] args) {
         
         String arr[] = {"dosa", "chole bhature", "samosa", "fruti"};
@@ -91,14 +104,13 @@ public class test {
        int num[] = {2,4,6,8,10,12,14};
        int key = 4;
        
-       int rev[] = {2,4,6,8,10};
+       int arry[] = {2,4,6,8,10};
 
-       reverseArr(rev);
+    //    reverseArr(arry);
 
-       for(int i = 0; i<rev.length; i++){
-        System.out.println(rev[i]);
-       }
-       
-
+    //    for(int i = 0; i<arry.length; i++){
+    //     System.out.println(arry[i]);
+    //    }
+       pairsArry(arry);
     }
 }
