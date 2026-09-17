@@ -94,6 +94,10 @@ public class test {
         System.out.println("total number of pairs is :"+tp);
     }
 
+    public static void printSubArry(int arr[]){
+        
+    }
+
     public static void main(String[] args) {
         
         String arr[] = {"dosa", "chole bhature", "samosa", "fruti"};
@@ -111,6 +115,7 @@ public class test {
     //    for(int i = 0; i<arry.length; i++){
     //     System.out.println(arry[i]);
     //    }
-       pairsArry(arry);
+    //    pairsArry(arry);
+
     }
 }
