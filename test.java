@@ -95,7 +95,23 @@ public class test {
     }
 
     public static void printSubArry(int arr[]){
-        
+       int totalSub = 0;
+       int sumOfSubArry = 0;
+        for(int i = 0; i<arr.length; i++){
+            for(int j = i; j<arr.length; j++){
+                for(int k = i; k<=j; k++){
+                    sumOfSubArry += arr[k];
+                    System.out.print(arr[k]+" ");
+                    
+                }
+                System.out.print("sum "+sumOfSubArry+", ");
+                sumOfSubArry = 0;
+                totalSub++;
+                System.out.println();
+            }
+            System.out.println();
+        }
+        System.out.println("total Sub Array: "+totalSub);
     }
 
     public static void main(String[] args) {
@@ -117,5 +133,6 @@ public class test {
     //    }
     //    pairsArry(arry);
 
+    printSubArry(arry);
     }
 }
