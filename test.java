@@ -94,30 +94,86 @@ public class test {
         System.out.println("total number of pairs is :"+tp);
     }
 
+public static void printsumofSubarr(int arr[]) {
+    int totalSub = 0;
+
+    int min = arr[0];
+    int max = arr[0];
+
+    for (int i = 0; i < arr.length; i++) {
+
+        for (int j = i; j < arr.length; j++) {
+
+            int sumOfSubArry = 0;
+
+            for (int k = i; k <= j; k++) {
+                sumOfSubArry += arr[k];
+                System.out.print(arr[k] + " ");
+            }
+
+            System.out.print("sum " + sumOfSubArry + ", ");
+
+            // Find minimum sum
+            if (sumOfSubArry < min) {
+                min = sumOfSubArry;
+            }
+
+            // Find maximum sum
+            if (sumOfSubArry > max) {
+                max = sumOfSubArry;
+            }
+
+            totalSub++;
+            System.out.println();
+        }
+
+        System.out.println();
+    }
+
+    System.out.println("Minimum of subarray: " + min);
+    System.out.println("Maximum of subarray: " + max);
+    System.out.println("Total Sub Array: " + totalSub);
+}
+
     public static void printSubArry(int arr[]){
        int totalSub = 0;
-       int sumOfSubArry = 0;
-        for(int i = 0; i<arr.length; i++){
-            for(int j = i; j<arr.length; j++){
+     
+       for(int i = 0; i<arr.length; i++){
+        int min = arr[i];
+       int max = arr[i];
+           for(int j = i; j<arr.length; j++){
+                int sumOfSubArry = 0;
                 for(int k = i; k<=j; k++){
                     sumOfSubArry += arr[k];
                     System.out.print(arr[k]+" ");
                     
                 }
                 System.out.print("sum "+sumOfSubArry+", ");
-                sumOfSubArry = 0;
+                //find minimum sum
+                if(sumOfSubArry < min){
+                    min = sumOfSubArry;
+                }
+                //find maximum sum
+                if(sumOfSubArry > max){
+                    max = sumOfSubArry;
+                }
+       
                 totalSub++;
                 System.out.println();
             }
+            System.out.println("minimum of subarry: "+ min+" ");
+            System.out.println("maximum of subarry: "+ max+" ");
+
             System.out.println();
         }
         System.out.println("total Sub Array: "+totalSub);
+
     }
 
     public static void main(String[] args) {
         
-        String arr[] = {"dosa", "chole bhature", "samosa", "fruti"};
-        String x = "samosa";
+    String arr[] = {"dosa", "chole bhature", "samosa", "fruti"};
+    String x = "samosa";
 
        int array[] = {1,2,6,3,5};
 
@@ -133,6 +189,7 @@ public class test {
     //    }
     //    pairsArry(arry);
 
-    printSubArry(arry);
+    // printSubArry(arry);
+    // printsumofSubarr(arry);
     }
 }
