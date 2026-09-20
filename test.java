@@ -69,10 +69,18 @@ public class test {
         //     }
         // }
         // binaryToDecimal(1010);
-        int arr[] = {10, 20, 30, 40, 50, 60};
+        // int arr[] = {10, 20, 30, 40, 50, 60};
 
-        System.out.println(binarySearch(arr, 50));
-       
+        // System.out.println(binarySearch(arr, 50));
+        int arr[] = {1,2,3,4,5};
+        for(int i = 0; i<arr.length; i++){
+            for(int j = i; j<arr.length; j++){
+                for(int k = i; k<=j; k++){
+                    System.out.print(arr[k]+", ");
+                }
+                System.out.println();
+            }
+        }
     }
 
 }
