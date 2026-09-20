@@ -19,6 +19,22 @@ public class test {
         }
         System.out.println(decimal);
     }
+    public static int binarySearch(int arr[], int key){
+
+        int st = 0;
+        int end = arr.length-1;
+        while (st <= end) {
+        int mid = (st+end)/2;
+            if(arr[mid] == key){
+                return mid;
+            }else if(arr[mid] < key){
+                st = mid+1;
+            }else{
+                end = mid-1;
+            }
+        }
+        return -1;
+    }
     public static void main(String[] args) {
         // for(int i = 2; i%3!=0||i%5!=0; i++){
         //     System.out.println(i+" ");
@@ -52,7 +68,10 @@ public class test {
         //         counter5 = 0;
         //     }
         // }
-        binaryToDecimal(1010);
+        // binaryToDecimal(1010);
+        int arr[] = {10, 20, 30, 40, 50, 60};
+
+        System.out.println(binarySearch(arr, 50));
        
     }
 
