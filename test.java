@@ -35,6 +35,25 @@ public class test {
         }
         return -1;
     }
+
+    public static void maxSumOfSubArry(int arr[]){
+        int max = 0;
+        int sum = 0;
+        for(int i = 0; i<arr.length; i++){
+            for(int j = i; j<arr.length; j++){
+                sum = 0;
+                for(int k = i; k<=j; k++){
+                    sum = sum + arr[k];
+                }
+                System.out.print("("+sum+") ");
+                if(max < sum){
+                    max = sum;
+                }
+            }
+            System.out.println();
+        }
+        System.out.println(max);
+    }
     public static void main(String[] args) {
         // for(int i = 2; i%3!=0||i%5!=0; i++){
         //     System.out.println(i+" ");
@@ -72,15 +91,17 @@ public class test {
         // int arr[] = {10, 20, 30, 40, 50, 60};
 
         // System.out.println(binarySearch(arr, 50));
-        int arr[] = {1,2,3,4,5};
-        for(int i = 0; i<arr.length; i++){
-            for(int j = i; j<arr.length; j++){
-                for(int k = i; k<=j; k++){
-                    System.out.print(arr[k]+", ");
-                }
-                System.out.println();
-            }
-        }
+        // int arr[] = {1,2,3,4,5};
+        // for(int i = 0; i<arr.length; i++){
+        //     for(int j = i; j<arr.length; j++){
+        //         for(int k = i; k<=j; k++){
+        //             System.out.print(arr[k]+", ");
+        //         }
+        //         System.out.println();
+        //     }
+        // }
+        int arr[] = {1,-2,6,-1,3};
+        maxSumOfSubArry(arr);
     }
 
 }
