@@ -1,4 +1,4 @@
-package arr1;
+package arrQuestions;
 import java.util.*;
 import array.linearSearch;
 import oops.encapsulation; 
@@ -187,7 +187,7 @@ public static void printsumofSubarr(int arr[]) {
     //    for(int i = 0; i<arry.length; i++){
     //     System.out.println(arry[i]);
     //    }
-    //    pairsArry(arry);
+       pairsArry(arry);
 
     // printSubArry(arry);
     // printsumofSubarr(arry);
