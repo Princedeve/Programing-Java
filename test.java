@@ -83,7 +83,8 @@ public class test {
             cs += arr[i];
             if(ms < cs){
                 ms = cs;
-            }else{
+            }
+            if(cs < 0){
                 cs = 0;
             }
         }
