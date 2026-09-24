@@ -77,8 +77,8 @@ public class test {
         
     }
     public static void maxSumOfSubArryKadans(int arr[]){
-        int cs = 0;
-        int ms = 0;
+        int cs = arr[0];
+        int ms = arr[0];
         for(int i = 0; i<arr.length; i++){
             cs += arr[i];
             if(ms < cs){
@@ -141,7 +141,9 @@ public class test {
         // maxSumOfSubArry(arr);
         // prifixSumOfSubArry(arr);
         int arr[] = {-2,-3,4,-1,-2,1,5,-3};
+        int num[] = {-1,-2,-3,-4};
         maxSumOfSubArryKadans(arr);
+        maxSumOfSubArryKadans(num);
     }
 
 }
