@@ -1,5 +1,7 @@
 import java.util.*;
 
+import oops.polymorphism;
+
 public class test {
     public static int power(int n, int m){
         int result = 1;
@@ -74,6 +76,19 @@ public class test {
         System.out.println(max);
         
     }
+    public static void maxSumOfSubArryKadans(int arr[]){
+        int cs = 0;
+        int ms = 0;
+        for(int i = 0; i<arr.length; i++){
+            cs += arr[i];
+            if(ms < cs){
+                ms = cs;
+            }else{
+                cs = 0;
+            }
+        }
+        System.out.println(ms);
+    }
 
     public static void main(String[] args) {
         // for(int i = 2; i%3!=0||i%5!=0; i++){
@@ -121,9 +136,11 @@ public class test {
         //         System.out.println();
         //     }
         // }
-        int arr[] = {1,-2,6,-1,3};
+        // int arr[] = {1,-2,6,-1,3};
         // maxSumOfSubArry(arr);
-        prifixSumOfSubArry(arr);
+        // prifixSumOfSubArry(arr);
+        int arr[] = {-2,-3,4,-1,-2,1,5,-3};
+        maxSumOfSubArryKadans(arr);
     }
 
 }
