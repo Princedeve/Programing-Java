@@ -54,6 +54,27 @@ public class test {
         }
         System.out.println(max);
     }
+    public static void prifixSumOfSubArry(int arr[]){
+        int prifix[] = new int[arr.length];
+        prifix[0] = arr[0];
+        int sum = 0;
+
+        for(int i = 1; i<prifix.length; i++){
+            prifix[i] = prifix[i-1] + arr[i];
+        }
+        int max = 0;
+        for(int i = 0; i<arr.length; i++){
+            for(int j = i; j<arr.length; j++){
+                sum =  i==0 ? prifix[j] : prifix[j] - prifix[i-1];
+                if(max  < sum){
+                    max = sum;
+                }
+            }
+        }
+        System.out.println(max);
+        
+    }
+
     public static void main(String[] args) {
         // for(int i = 2; i%3!=0||i%5!=0; i++){
         //     System.out.println(i+" ");
@@ -101,7 +122,8 @@ public class test {
         //     }
         // }
         int arr[] = {1,-2,6,-1,3};
-        maxSumOfSubArry(arr);
+        // maxSumOfSubArry(arr);
+        prifixSumOfSubArry(arr);
     }
 
 }
