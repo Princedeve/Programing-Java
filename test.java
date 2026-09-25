@@ -90,7 +90,18 @@ public class test {
         }
         System.out.println(ms);
     }
-
+ public static int maxProduct(int[] nums) {
+        int cp = 1;
+        int mp = 0;
+        for(int i = 0; i<nums.length; i++){
+            cp = cp * nums[i];
+            if(mp < cp){
+                mp = cp;
+            }
+        }
+        return mp;
+    }
+    
     public static void main(String[] args) {
         // for(int i = 2; i%3!=0||i%5!=0; i++){
         //     System.out.println(i+" ");
@@ -140,10 +151,12 @@ public class test {
         // int arr[] = {1,-2,6,-1,3};
         // maxSumOfSubArry(arr);
         // prifixSumOfSubArry(arr);
-        int arr[] = {-2,-3,4,-1,-2,1,5,-3};
-        int num[] = {-1,-2,-3,-4};
-        maxSumOfSubArryKadans(arr);
-        maxSumOfSubArryKadans(num);
+        // int arr[] = {-2,-3,4,-1,-2,1,5,-3};
+        // int num[] = {-1,-2,-3,-4};
+        // maxSumOfSubArryKadans(arr);
+        // maxSumOfSubArryKadans(num);
+        // int num[] = {0,2};
+        // System.out.println(maxProduct(num));
     }
 
 }
