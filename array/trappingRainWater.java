@@ -6,7 +6,7 @@ public class trappingRainWater { // O(n)
   //loop
   //waterlevel = min(leftmax bound, rightmax bound)
   //trappedwater = waterlevel - height[i]
-     public static int[] getLeftMax(int arr[]){
+    public static int[] getLeftMax(int arr[]){
     int left[] = new int[arr.length];
     left[0] = arr[0];
     for(int i = 1; i<arr.length; i++){

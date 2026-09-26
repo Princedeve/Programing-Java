@@ -101,6 +101,37 @@ public class test {
         }
         return mp;
     }
+
+    public static void trappedRainWater(int height[]){
+        int maxLeft[] = new int[height.length];
+        int maxRight[] = new int[height.length];
+        maxLeft[0] = height[0];
+        maxRight[height.length-1] = height[height.length-1];
+
+        for(int i = 1; i<height.length; i++){
+            if(maxLeft[i-1] > height[i]){
+                maxLeft[i] = maxLeft[i-1];
+            }else{
+                maxLeft[i] = height[i];
+            }
+        }
+        for(int i = height.length-2; i>=0; i--){
+            if(maxRight[i+1] > height[i]  ){
+                maxRight[i] = maxRight[i+1];
+            }else{
+                maxRight[i] = height[i];
+            }
+        }
+        int trappedRainWater = 0;
+        for(int i = 0; i<height.length; i++){
+            if(maxLeft[i] < maxRight[i]){
+                trappedRainWater += (maxLeft[i] - height[i]);
+            }else{
+                trappedRainWater += (maxRight[i] - height[i]);
+            }
+        }
+        System.out.println(trappedRainWater);
+    }
     
     public static void main(String[] args) {
         // for(int i = 2; i%3!=0||i%5!=0; i++){
@@ -157,6 +188,9 @@ public class test {
         // maxSumOfSubArryKadans(num);
         // int num[] = {0,2};
         // System.out.println(maxProduct(num));
+        int height[] = {4,2,0,6,3,2,5};
+        trappedRainWater(height);
+
     }
 
 }
