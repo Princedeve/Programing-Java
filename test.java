@@ -132,7 +132,19 @@ public class test {
         }
         System.out.println(trappedRainWater);
     }
-    
+    public static int profitCalculate(int price[]){
+        int buy = price[0];
+        int maxProfit = 0;
+        for(int i = 0; i<price.length; i++){
+            if(buy < price[i]){
+               int profit = price[i] - buy;
+               maxProfit = Math.max(maxProfit, profit);
+            }else{
+                buy = price[i];
+            }
+        }
+        return maxProfit;
+    }
     public static void main(String[] args) {
         // for(int i = 2; i%3!=0||i%5!=0; i++){
         //     System.out.println(i+" ");
@@ -188,9 +200,10 @@ public class test {
         // maxSumOfSubArryKadans(num);
         // int num[] = {0,2};
         // System.out.println(maxProduct(num));
-        int height[] = {4,2,0,6,3,2,5};
-        trappedRainWater(height);
-
+        // int height[] = {4,2,0,6,3,2,5};
+        // trappedRainWater(height);
+        int price[] = {7,1,5,3,6,4};
+       System.out.println(profitCalculate(price));
     }
 
 }
