@@ -2,7 +2,7 @@ package array;
 
 public class kadane'sSubArraymax {
    public static void kadanesMaxSubArraySum(int arr[]){
-    // using kadane's algorithm
+    //using kadane's algorithm
     int max = arr[0];
     int sum = arr[0];
     for(int i = 0; i<arr.length; i++){
