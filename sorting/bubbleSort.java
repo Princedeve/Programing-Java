@@ -1,5 +1,9 @@
 package sorting;
 import java.util.*;
+// so Bubble sort work, this is find largest element btw first 
+// element and secocnd element and find largest number and put in second element place
+//  and first place for smallest then largest for ascending order using swapping
+// oposite of selection sort find largest and put in end using swap
 
 public class bubbleSort {
     public static void bubBleSort(int arr[]){
